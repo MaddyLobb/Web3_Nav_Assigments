@@ -1,7 +1,7 @@
 import { gsap } from "gsap";
 
 const growTL = new gsap.timeline();
-growTL.to("#hiddenMenuLink",{duration:0.5, alpha: 0});
+growTL.to("#rectangle1",{duration:0.5, scaleX: 2});
 
 export const navTL = new gsap.timeline({paused:true});
 

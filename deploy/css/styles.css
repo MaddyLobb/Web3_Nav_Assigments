@@ -373,8 +373,7 @@ a {
     Typography
 ============= */
 body {
-  font-family: "Open Sans", sans-serif;
-  font-family: "Oswald", sans-serif;
+  font-family: "Italiana", serif;
 }
 body h1, body h2, body h3, body h4 {
   margin: 0;
@@ -463,7 +462,7 @@ header > div aside a {
 }
 #hero > div article section h1 {
   font-size: 2.75rem;
-  font-family: "Oswald", sans-serif;
+  font-family: "Italiana", serif;
   font-weight: 900;
 }
 @media (min-width: 768px) {
@@ -478,7 +477,7 @@ header > div aside a {
 }
 #hero > div article section p {
   font-size: 1.875rem;
-  font-family: "Oswald", sans-serif;
+  font-family: "Italiana", serif;
   font-weight: 400;
 }
 @media (min-width: 768px) {
@@ -496,42 +495,18 @@ header > div aside a {
 
 #content {
   display: grid;
-  grid-template-columns: auto 240px;
+  grid-template-columns: auto;
   grid-template-areas: ". content ";
   position: absolute;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
   left: 0;
   z-index: -1;
 }
 #content > div {
   grid-area: content;
 }
-#content > div nav ul {
-  display: flex;
-  justify-content: center;
-}
-#content > div nav ul li a:link, #content > div nav ul li a:visited {
-  text-decoration: none;
-  color: #000;
-  font-size: 1.5rem;
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.875rem;
-  font-weight: 300;
-  writing-mode: vertical-rl;
-  float: right;
-}
-#content > div #about {
-  background-color: beige;
-  height: 100vh;
-  width: 33%;
-}
-#content > div #shop {
-  background-color: cadetblue;
-  height: 100vh;
-  width: 33%;
-}
-#content > div #food {
-  background-color: coral;
-  height: 100vh;
-  width: 33%;
+#content > div #rectangles {
+  width: 100%;
+  height: 100%;
 }

@@ -1,1 +1,0 @@
-import{gsap}from"gsap";export const navTL=new gsap.timeline({paused:!0});navTL.add(arrowTL,"burger");
