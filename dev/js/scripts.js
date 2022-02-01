@@ -4,38 +4,58 @@ import {scrollPage} from "./pageScroll"
 import { displayWindowSize } from "./mobileResizing"
 
 var burgerButton = document.querySelector("#burger");
-let canISeeMenu = false;
 
-function openCloseMenu(){
-    if(canISeeMenu === false){
-        navTL.play();
-        menuAnimation.play();
-        canISeeMenu = true;
-    }else{
-        navTL.reverse();
-        menuAnimation.reverse();
-        canISeeMenu = false;
-    }
-}
 
-burgerButton.addEventListener("click", openCloseMenu);
+burgerButton.addEventListener("click",() =>{
 
-let navButtons = document.querySelectorAll(".nav-btns");
+    navTL.play();
 
-for (const button of navButtons){
-    button.addEventListener("click", checkScrolling);
-    button.addEventListener("click", openCloseMenu);
-}
+        // if(canISeeMenu === false){
+        //     navTL.play();
+        //     menuAnimation.play();
+        //     canISeeMenu = true;
+        // }else{
+        //     navTL.reverse();
+        //     menuAnimation.reverse();
+        //     canISeeMenu = false;
+        // }
 
-function checkScrolling(e) {
-    const indexValue = [].indexOf.call(navButtons, e.target)
-    if (indexValue != -1) {
-        scrollPage(indexValue);
-    }
-}
+});
 
 
 
-window.addEventListener("resize", displayWindowSize);
+// let canISeeMenu = false;
 
-window.addEventListener('load', displayWindowSize);
+// function openCloseMenu(){
+//     if(canISeeMenu === false){
+//         navTL.play();
+//         menuAnimation.play();
+//         canISeeMenu = true;
+//     }else{
+//         navTL.reverse();
+//         menuAnimation.reverse();
+//         canISeeMenu = false;
+//     }
+// }
+
+// burgerButton.addEventListener("click", openCloseMenu);
+
+// let navButtons = document.querySelectorAll(".nav-btns");
+
+// for (const button of navButtons){
+//     button.addEventListener("click", checkScrolling);
+//     button.addEventListener("click", openCloseMenu);
+// }
+
+// function checkScrolling(e) {
+//     const indexValue = [].indexOf.call(navButtons, e.target)
+//     if (indexValue != -1) {
+//         scrollPage(indexValue);
+//     }
+// }
+
+
+
+// window.addEventListener("resize", displayWindowSize);
+
+// window.addEventListener('load', displayWindowSize);
