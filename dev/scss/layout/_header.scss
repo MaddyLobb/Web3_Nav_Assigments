@@ -1,0 +1,22 @@
+/* =============
+    Header
+============= */
+header{
+    position: fixed;
+    width: 50%;
+    background-color: $white;
+    z-index: 1000;
+    >div{
+        display: grid;
+        grid-template-columns: 20% auto;
+        padding: 8px 16px;
+
+        aside{
+            a{
+                display: inline-block;
+            }
+        }
+    }
+
+
+}

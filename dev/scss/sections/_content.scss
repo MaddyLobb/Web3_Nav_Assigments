@@ -1,0 +1,56 @@
+#content {
+
+    display: grid;
+    grid-template-columns:  auto 240px;
+    grid-template-areas: ". content ";
+    position: absolute;
+    width: 100%;
+    left:0;
+    z-index: -1;
+
+    >div{
+        grid-area: content;
+        nav{
+           
+            //border: 1px solid red;
+            ul{
+                display: flex;
+                justify-content: center;
+            
+                li{
+                    a:link, a:visited{
+                        text-decoration: none;
+                        color: $black;
+                        font-size: rem-calc(24);
+                        font-family: 'Open Sans', sans-serif;
+                        font-size: rem-calc(30);
+                        font-weight: 300;
+                        writing-mode: vertical-rl;
+                        float: right;
+                    }
+                }
+                
+            }
+        }
+
+        #about{ 
+            background-color: beige;
+            height: 100vh;
+            width: 33%;
+        }
+
+        #shop{
+            background-color: cadetblue;
+            height: 100vh;
+            width: 33%;
+        }
+
+        #food{
+            background-color: coral;
+            height: 100vh;
+            width: 33%;
+        }
+
+    }
+
+}
