@@ -2,6 +2,18 @@
     height: 100vh;
     width: 100vw;
 
+    @include md {
+        display: grid;
+        grid-template-areas: ". hero .";
+        grid-template-columns: auto 768px auto;
+    }
+
+    @include lg {
+        display: grid;
+        grid-template-areas: ". hero .";
+        grid-template-columns: auto 992px auto;
+    }
+
     @include xl {
         display: grid;
         grid-template-areas: ". hero .";
@@ -13,6 +25,12 @@
         overflow: hidden !important;
         height: 100%;
 
+        @include md {
+            grid-area: hero;
+        }
+        @include lg {
+            grid-area: hero;
+        }
         @include xl {
             grid-area: hero;
         }

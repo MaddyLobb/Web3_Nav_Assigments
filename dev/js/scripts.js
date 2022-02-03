@@ -1,5 +1,5 @@
 var li_items = document.querySelectorAll(".accordion_wrap ul li");
-var ul = document.querySelector(".accordion_wrap ul");
+//var ul = document.querySelector(".accordion_wrap ul");
 
 li_items.forEach(function(item){
 	item.addEventListener("click", function(){
@@ -10,11 +10,11 @@ li_items.forEach(function(item){
 	});
 });
 
-ul.addEventListener("mouseleave", function(){
-	li_items.forEach(function(item){
-		item.classList.remove("active");
-	})
-});
+// ul.addEventListener("mouseleave", function(){
+// 	li_items.forEach(function(item){
+// 		item.classList.remove("active");
+// 	})
+// });
 
 
 // code to follow w3 school 
