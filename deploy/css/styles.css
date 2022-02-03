@@ -483,7 +483,6 @@ header > div aside a {
   display: flex;
   height: 90%;
   width: 70%;
-  justify-content: left;
 }
 #hero > div article section {
   color: #000;
@@ -552,6 +551,12 @@ nav ul .main_title {
   position: absolute;
   top: 45%;
   transform: translate(50%, -50%);
+}
+nav ul .content {
+  overflow: hidden;
+  padding: 15px;
+  font-size: 1.25rem;
+  position: absolute;
 }
 nav ul #bar-1 {
   background-color: beige;

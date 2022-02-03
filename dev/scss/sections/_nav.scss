@@ -37,6 +37,13 @@ nav{
             transform: translate(50%,-50%);
         }
 
+        .content{
+            overflow: hidden;
+            padding: 15px;
+            font-size: rem-calc(20);
+            position: absolute;
+        }
+
         #bar-1{
             background-color: beige;
         }
