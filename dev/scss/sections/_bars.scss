@@ -1,4 +1,38 @@
-#content {
+#bars{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    overflow: hidden;
+    border: 1px solid red;
+    z-index: 20;
+
+    >div{
+        position: relative;
+    }
+
+    .sections{
+        height: 100vh;
+        width: 100vw;
+        position: absolute;
+        top: 0;
+        //left: 0;
+
+    }
+
+    #beige{
+        background-color: beige;
+        left: 85vw;
+    }
+
+    #cadetblue{
+        background-color: cadetblue;
+        left: 90vw;
+    }
+
+    #coral{
+        background-color: coral;
+        left: 95vw;
+    }
 
     // #rectangles{
     //     //display: flex;
@@ -33,25 +67,25 @@
 
 
     
-    display: grid;
-    grid-template-columns:  auto ;
-    grid-template-areas: ". content ";
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    left:0;
-    z-index: -1;
+    // display: grid;
+    // grid-template-columns:  auto ;
+    // grid-template-areas: ". content ";
+    // position: absolute;
+    // width: 100vw;
+    // height: 100vh;
+    // left:0;
+    // z-index: -1;
 
-    >div{
-        grid-area: content;
+    // >div{
+    //     grid-area: content;
 
-        #rectangles{
-            //display: flex;
-            //position: absolute;
-            width: 100%;
-            height: 100%
+    //     #rectangles{
+    //         //display: flex;
+    //         //position: absolute;
+    //         width: 100%;
+    //         height: 100%
     
-        }
+    //     }
     //     nav{
            
     //         //border: 1px solid red;
@@ -73,7 +107,7 @@
     //             }
                 
     //         }
-    }
+    //}
     //     #about{ 
     //         background-color: beige;
     //         height: 100vh;

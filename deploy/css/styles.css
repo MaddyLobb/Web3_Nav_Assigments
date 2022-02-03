@@ -413,9 +413,9 @@ textarea {
 ============= */
 header {
   position: fixed;
-  width: 50%;
+  width: 100%;
   background-color: #fff;
-  z-index: 1000;
+  z-index: 10;
 }
 header > div {
   display: grid;
@@ -493,20 +493,32 @@ header > div aside a {
   }
 }
 
-#content {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-areas: ". content ";
-  position: absolute;
-  width: 100vw;
+#bars {
   height: 100vh;
-  left: 0;
-  z-index: -1;
+  width: 100vw;
+  position: fixed;
+  overflow: hidden;
+  border: 1px solid red;
+  z-index: 20;
 }
-#content > div {
-  grid-area: content;
+#bars > div {
+  position: relative;
 }
-#content > div #rectangles {
-  width: 100%;
-  height: 100%;
+#bars .sections {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+}
+#bars #beige {
+  background-color: beige;
+  left: 85vw;
+}
+#bars #cadetblue {
+  background-color: cadetblue;
+  left: 90vw;
+}
+#bars #coral {
+  background-color: coral;
+  left: 95vw;
 }

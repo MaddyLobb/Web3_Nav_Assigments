@@ -63,12 +63,12 @@
       "sC" : 3,
       "tS" : 0
     },
-    "\/dev\/content\/content.kit" : {
+    "\/dev\/content\/bars.kit" : {
       "cB" : 0,
       "ft" : 2048,
       "hM" : 0,
       "oA" : 1,
-      "oAP" : "\/dev\/content\/content.html",
+      "oAP" : "\/dev\/content\/bars.html",
       "oF" : 0
     },
     "\/dev\/content\/hero.kit" : {
@@ -283,7 +283,7 @@
       "pg" : 0,
       "sct" : 0
     },
-    "\/dev\/scss\/sections\/_content.scss" : {
+    "\/dev\/scss\/sections\/_bars.scss" : {
       "aP" : 0,
       "bl" : 0,
       "co" : 0,
@@ -292,7 +292,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/dev\/scss\/sections\/_content.css",
+      "oAP" : "\/dev\/scss\/sections\/_bars.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
