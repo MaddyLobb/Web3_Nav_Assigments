@@ -369,6 +369,11 @@ a {
   text-decoration: none;
 }
 
+button {
+  border: none;
+  outline: none;
+}
+
 /* =============
     Typography
 ============= */
@@ -494,31 +499,57 @@ header > div aside a {
 }
 
 #bars {
-  height: 100vh;
   width: 100vw;
+  height: 100vh;
   position: fixed;
-  overflow: hidden;
-  border: 1px solid red;
-  z-index: 20;
+  z-index: 20px;
 }
-#bars > div {
-  position: relative;
-}
-#bars .sections {
-  height: 100vh;
-  width: 100vw;
-  position: absolute;
-  top: 0;
-}
-#bars #beige {
+#bars .beige {
   background-color: beige;
-  left: 85vw;
 }
-#bars #cadetblue {
+#bars .cadetblue {
   background-color: cadetblue;
-  left: 90vw;
 }
-#bars #coral {
+#bars .coral {
   background-color: coral;
-  left: 95vw;
+}
+#bars .accordion_wrap ul {
+  display: flex;
+  justify-content: right;
+}
+#bars .accordion_wrap .accordion_item {
+  list-style: none;
+  top: 0;
+  width: 80px;
+  height: 100vh;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s linear;
+}
+#bars .accordion_wrap .accordion_item:hover,
+#bars .accordion_wrap li.active .accordion_item .beige {
+  background: #a48d2d;
+}
+#bars .accordion_wrap ul li .maintitle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#bars .accordion_wrap ul li {
+  display: flex;
+}
+#bars .accordion_menu {
+  width: 0px;
+  height: 100vh;
+  background: #fffaeb;
+  color: #a48d2d;
+  overflow: hidden;
+  transition: width 0.2s ease;
+}
+#bars .accordion_wrap ul li.active .accordion_menu {
+  width: 1350px;
+}
+#bars .accordion_menu .inner_am {
+  padding: 15px;
 }

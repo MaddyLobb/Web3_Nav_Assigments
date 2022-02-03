@@ -1,47 +1,241 @@
 #bars{
-    height: 100vh;
     width: 100vw;
+    height: 100vh;
     position: fixed;
-    overflow: hidden;
-    border: 1px solid red;
-    z-index: 20;
+    z-index: 20px;
 
-    >div{
-        position: relative;
-    }
-
-    .sections{
-        height: 100vh;
-        width: 100vw;
-        position: absolute;
-        top: 0;
-        //left: 0;
-
-    }
-
-    #beige{
+    .beige{
         background-color: beige;
-        left: 85vw;
     }
-
-    #cadetblue{
+    .cadetblue{
         background-color: cadetblue;
-        left: 90vw;
     }
 
-    #coral{
+    .coral{
         background-color: coral;
-        left: 95vw;
     }
 
-    // #rectangles{
-    //     //display: flex;
-    //     position: absolute;
-    //     width: 100%;
-    //     height: 100%
+
+    .accordion_wrap ul{
+        display: flex;
+        justify-content: right;
+    }
+    .accordion_wrap .accordion_item{
+        list-style: none;
+        top: 0;
+        width: 80px;
+        height: 100vh;
+        cursor: pointer;
+        position: relative;
+        transition: all 0.2s linear;
+    }
+
+    .accordion_wrap .accordion_item:hover,
+    .accordion_wrap li.active .accordion_item .beige{
+	    background: #a48d2d;
+    }
+
+    // .accordion_wrap li:first-child .accordion_item{
+    //     border-top-left-radius: 3px;
+    //     border-bottom-left-radius: 3px;
+    // }
+
+    // .accordion_wrap li:last-child .accordion_item,
+    // .accordion_wrap li:last-child .accordion_menu{
+	//     border-right: 0px;
+	//     border-top-right-radius: 3px;
+	//     border-bottom-right-radius: 3px;
+    // }
+
+    .accordion_wrap ul li .maintitle{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    .accordion_wrap ul li{
+        display: flex;
+    }
+
+    .accordion_menu{
+        width: 0px;
+        height: 100vh;
+        background: #fffaeb;
+        color: #a48d2d;
+        overflow: hidden;
+        transition: width 0.2s ease;
+    }
+
+    .accordion_wrap ul li.active .accordion_menu{
+        width: 1350px;
+    }
+
+    .accordion_menu .inner_am{
+        padding: 15px;
+    }
+
+ 
+
+    //attempt at flexbox css very confusing LOl
+    // width: 100vw;
+    // height: 100vh;
+    // position: fixed;
+    // overflow: hidden;
+    // z-index: 2500;
+
+    // div{
+    //     list-style: none;
+    //     position: relative;
+    //     display: flex;
+    //     flex-direction: row;
+    //     flex-wrap: nowrap;
+    //     align-items: stretch;
+    //     overflow: hidden;
 
     // }
 
+    // article{
+    //     flex: initial;
+    //     width: 20%;
+    //     height: 100vh;
+    //     text-align: center;
+    //     color: black;
+    //     text-decoration: none;
+    //     //vertical-align: bottom;
+    //     box-sizing: border-box;
+    //     padding: 2vh 1vw;
+    //     position: relative;
+    //     //writing-mode: vertical-rl;
+    // }
+
+    // #beige{
+    //     background-color: beige;
+    //     left: 85vw;
+    //     position: absolute;
+    // }
+
+    // #cadetblue{
+    //     background-color: cadetblue;
+    //     left: 90vw;
+    //     position: absolute;
+    // }
+
+    // #coral{
+    //     background-color: coral;
+    //     left: 95vw;
+    //     position: absolute;
+    // }
+
+    // div:hover article {
+    //     flex: initial;
+    //     width: 10%;
+    // }
+
+    // div:hover article {
+    //     width: 60%;
+    // }
+
+
+
+    //css properties that followed w3school + josh to code with js 
+    // height: 100vh;
+    // width: 100vw;
+    // position: fixed;
+    // overflow: hidden;
+    // //border: 1px solid red;
+    // z-index: 20;
+
+    // .accordion{
+    //     //writing-mode: vertical-rl;
+    //     cursor: pointer;
+    //     text-align: left;
+    //     height: 100vh;
+    //     width: 100vw;
+    //     position: absolute;
+    //     top: 0;
+    //     transition: 0.4s;
+
+    // }
+
+    // .active, .accordion:hover {
+    //     background-color: #000;
+    // }
+
+
+    // .panel {
+    //     padding: 0 18px;
+    //     background-color: white;
+    //     display: none;
+    //     overflow: hidden;
+    //     //max-height: 0;
+    //     //transition: max-height 0.2s ease-out;
+    //     max-width: 0;
+    //     transition: max-width 0.2s ease-out;
+    // }
+
+    // #beige{
+    //     background-color: beige;
+    //     left: 85vw;
+    // }
+
+    // #cadetblue{
+    //     background-color: cadetblue;
+    //     left: 90vw;
+    // }
+
+    // #coral{
+    //     background-color: coral;
+    //     left: 95vw;
+    // }
+
+
+
+
+
+
+
+
+
+
+    // the orignal bar properties josh gave on tuesday!!
+    // height: 100vh;
+    // width: 100vw;
+    // position: fixed;
+    // overflow: hidden;
+    // border: 1px solid red;
+    // z-index: 20;
+
+    // >div{
+    //     position: relative;
+    // }
+
+    // .sections{
+    //     height: 100vh;
+    //     width: 100vw;
+    //     position: absolute;
+    //     top: 0;
+    //     //left: 0;
+
+    // }
+
+    // #beige{
+    //     background-color: beige;
+    //     left: 85vw;
+    // }
+
+    // #cadetblue{
+    //     background-color: cadetblue;
+    //     left: 90vw;
+    // }
+
+    // #coral{
+    //     background-color: coral;
+    //     left: 95vw;
+    // }
+
+
+/// nav so that i know how I originally got vertical text 
     // nav{
 
     //     //display: flex;
@@ -60,70 +254,6 @@
     //             float: right;
     //         }
     
-    //     }
-
-    // }
-
-
-
-    
-    // display: grid;
-    // grid-template-columns:  auto ;
-    // grid-template-areas: ". content ";
-    // position: absolute;
-    // width: 100vw;
-    // height: 100vh;
-    // left:0;
-    // z-index: -1;
-
-    // >div{
-    //     grid-area: content;
-
-    //     #rectangles{
-    //         //display: flex;
-    //         //position: absolute;
-    //         width: 100%;
-    //         height: 100%
-    
-    //     }
-    //     nav{
-           
-    //         //border: 1px solid red;
-    //         ul{
-    //             display: flex;
-    //             justify-content: center;
-            
-    //             li{
-    //                 a:link, a:visited{
-    //                     text-decoration: none;
-    //                     color: $black;
-    //                     font-size: rem-calc(24);
-    //                     font-family: 'Italiana', serif;
-    //                     font-size: rem-calc(30);
-    //                     font-weight: 300;
-    //                     writing-mode: vertical-rl;
-    //                     float: right;
-    //                 }
-    //             }
-                
-    //         }
-    //}
-    //     #about{ 
-    //         background-color: beige;
-    //         height: 100vh;
-    //         width: 33%;
-    //     }
-
-    //     #shop{
-    //         background-color: cadetblue;
-    //         height: 100vh;
-    //         width: 33%;
-    //     }
-
-    //     #food{
-    //         background-color: coral;
-    //         height: 100vh;
-    //         width: 33%;
     //     }
 
     // }
