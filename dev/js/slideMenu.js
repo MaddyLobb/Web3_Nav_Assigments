@@ -1,4 +1,6 @@
-let rightSide = document.querySelectorAll(".nav-container .nav-rightSide");
+
+
+let rightSide = document.querySelectorAll(".nav-rightSide");
 let buttons = document.querySelectorAll(".nav-container aside");
 let currentIndex =  -1;
 

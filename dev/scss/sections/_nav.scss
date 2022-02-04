@@ -31,6 +31,9 @@ nav{
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
+        // @include md{
+        //     position: static;
+        // }
 
         .nav-container{
             display: flex; 
@@ -57,12 +60,14 @@ nav{
                 }
 
                 .nav-rightSide{
-                    visibility: hidden; /// causing content to not show at larger size///
+                    // visibility: hidden; /// causing content to not show at larger size///
+                    display: none;
 
                     @include md{
                         width: 0px;
                         height: 100%;
                         transition: 0.25s;   
+                        display: block;
                     }
                     
                 }

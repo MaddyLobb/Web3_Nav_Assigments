@@ -575,13 +575,14 @@ nav ul .nav-container {
   }
 }
 nav ul .nav-container .nav-content .nav-rightSide {
-  visibility: hidden;
+  display: none;
 }
 @media (min-width: 768px) {
   nav ul .nav-container .nav-content .nav-rightSide {
     width: 0px;
     height: 100%;
     transition: 0.25s;
+    display: block;
   }
 }
 nav ul .main_title {

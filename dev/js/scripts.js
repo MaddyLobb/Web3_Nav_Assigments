@@ -1,55 +1,45 @@
 import { setupMenu } from "./slideMenu"
-import { navTL } from "./barsEnter"
-import { burgerTL } from "./burgerAnimation";
+import { barTL } from "./barsEnter"
+import { burgerTL } from "./burgerAnimation"
+import { mobileMenuEnter } from "./mobileMenu";
+import { displayWindowSizeMobile } from "./mobileResize";
+import { mobileMenuAnimation } from "./mobileAnimation";
 
 var burgerButton = document.querySelector("#burger");
+let canISeeMenu = false;
+
+function openCloseMenu(){
+    if(canISeeMenu === false){
+        burgerTL.play();
+        mobileMenuEnter.play();
+        //mobileMenuAnimation.play();
+        canISeeMenu = true;
+    }else{
+        burgerTL.reverse();
+        mobileMenuEnter.reverse();
+        //mobileMenuAnimation.reverse();
+        canISeeMenu = false;
+    }
+}
+
+burgerButton.addEventListener("click", openCloseMenu);
 
 
-burgerButton.addEventListener("click", () =>{
-    //console.log("burger clicked"); ///burger is being clicked but not playing///
-    burgerTL.play();
-});
+// burgerButton.addEventListener("click", () =>{
+//     //console.log("burger clicked");
+//     burgerTL.play();
+// });
 
 
 window.addEventListener('load', function () {
+    console.log("load");
     setupMenu();
-    navTL();
+    barTL.play();
 });
 
+window.addEventListener("click", mobileMenuAnimation);
 
-//last working code 
-// var li_items = document.querySelectorAll(".accordion_wrap ul li");
-// //var ul = document.querySelector(".accordion_wrap ul");
+window.addEventListener('resize', displayWindowSizeMobile);
 
-// li_items.forEach(function(item){
-// 	item.addEventListener("click", function(){
-// 		li_items.forEach(function(item){
-// 			item.classList.remove("active");
-// 		})
-// 		item.classList.add("active");
-// 	});
-// });
+window.addEventListener('load', displayWindowSizeMobile);
 
-// ul.addEventListener("mouseleave", function(){
-// 	li_items.forEach(function(item){
-// 		item.classList.remove("active");
-// 	})
-// });
-
-
-// code to follow w3 school 
-// var accordion = document.getElementsByClassName("accordion")
-
-// var i;
-
-// for (i = 0; i < accordion.length; i++){
-//     accordion[i].addEventListener("click", function(){ 
-//         this.classList.toggle ("active");
-//         var panel = this.nextElementSibling;
-//         if (panel.style.maxWidth) {
-//             panel.style.maxWidth = "null";
-//         } else {
-//         panel.style.maxWidth = panel.scrollWidth + "px";
-//         }  
-//     });
-// }
