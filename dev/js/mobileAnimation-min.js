@@ -1,0 +1,1 @@
+import{mobileSquaresFadeIn}from"./mobileFadeIn";export function mobileMenuAnimation(){document.documentElement.clientWidth<=768?(console.log("pause"),mobileSquaresFadeIn.reverse()):(console.log("play"),mobileSquaresFadeIn.play())}

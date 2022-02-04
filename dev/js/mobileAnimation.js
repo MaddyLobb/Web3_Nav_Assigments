@@ -11,7 +11,6 @@ import { mobileSquaresFadeIn } from "./mobileFadeIn";
 export function mobileMenuAnimation(){
 
     //let animation = document.querySelector(".nav-container");
-        //let menuHeight = menu.offsetHeight;
                 
             if(document.documentElement.clientWidth <= 768){
                 console.log("pause");

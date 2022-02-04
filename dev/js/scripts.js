@@ -3,7 +3,7 @@ import { barTL } from "./barsEnter"
 import { burgerTL } from "./burgerAnimation"
 import { mobileMenuEnter } from "./mobileMenu";
 import { displayWindowSizeMobile } from "./mobileResize";
-import { mobileMenuAnimation } from "./mobileAnimation";
+//import { mobileMenuAnimation } from "./mobileAnimation";
 
 var burgerButton = document.querySelector("#burger");
 let canISeeMenu = false;
@@ -37,7 +37,7 @@ window.addEventListener('load', function () {
     barTL.play();
 });
 
-window.addEventListener("click", mobileMenuAnimation);
+//window.addEventListener("click", mobileMenuAnimation);
 
 window.addEventListener('resize', displayWindowSizeMobile);
 
