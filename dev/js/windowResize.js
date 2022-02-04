@@ -4,15 +4,15 @@ import { gsap } from "gsap";
 
 export function displayWindowSize(){
 
-    let menu = document.querySelector("#nav-container");
+    let menu = document.querySelector(".nav-container");
     let menuWidth = menu.offsetWidth;
 
     // check the view port view and see if the menu needs to be moved
     if(document.documentElement.clientWidth <= 1024){
         console.log("hide");
-        gsap.set("#nav-container",{y:-menuWidth});
+        gsap.set(".nav-container",{y:-menuWidth, alpha:0});
     }else{
         console.log("un-hide");
-        gsap.set("#nav-container",{y:0});
+        gsap.set(".nav-container",{y:0, alpha:1});
     }
 }
