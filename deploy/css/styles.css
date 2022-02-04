@@ -528,38 +528,135 @@ nav {
   right: 0;
   z-index: 20;
 }
+nav #burger-container {
+  justify-content: flex-end;
+  display: flex;
+  padding: 30px;
+  position: absolute;
+  right: 0;
+}
+@media (min-width: 768px) {
+  nav #burger-container {
+    display: none !important;
+  }
+}
+nav #burger-container #burger {
+  z-index: 30;
+  height: 40px;
+  width: 40px;
+}
 nav ul {
   height: 100%;
   display: flex;
+  min-height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
-nav ul .nav-container .nav-content aside {
-  width: 50px;
-  height: 100%;
-  cursor: pointer;
+nav ul .nav-container {
+  display: flex;
+  flex-basis: calc(50% - 0px);
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+}
+@media (min-width: 768px) {
+  nav ul .nav-container {
+    height: 100%;
+    width: 100%;
+    flex-basis: calc(0% - 0px);
+  }
+}
+@media (min-width: 768px) {
+  nav ul .nav-container .nav-content aside {
+    width: 60px;
+    height: 100%;
+    cursor: pointer;
+  }
 }
 nav ul .nav-container .nav-content .nav-rightSide {
-  width: 0px;
-  height: 100%;
-  transition: 0.25s;
+  visibility: hidden;
+}
+@media (min-width: 768px) {
+  nav ul .nav-container .nav-content .nav-rightSide {
+    width: 0px;
+    height: 100%;
+    transition: 0.25s;
+  }
 }
 nav ul .main_title {
-  writing-mode: vertical-rl;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 1.25rem;
-  position: absolute;
-  top: 45%;
-  transform: translate(50%, -50%);
+}
+nav ul #about {
+  transform: rotate(-45deg);
+}
+@media (min-width: 768px) {
+  nav ul #about {
+    writing-mode: vertical-rl;
+    font-size: 1.25rem;
+    position: absolute;
+    top: 45%;
+    transform: translate(70%, -50%);
+  }
+}
+nav ul #community {
+  transform: rotate(45deg);
+}
+@media (min-width: 768px) {
+  nav ul #community {
+    writing-mode: vertical-rl;
+    font-size: 1.25rem;
+    position: absolute;
+    top: 45%;
+    transform: translate(70%, -50%);
+  }
+}
+nav ul #shop {
+  transform: rotate(45deg);
+}
+@media (min-width: 768px) {
+  nav ul #shop {
+    writing-mode: vertical-rl;
+    font-size: 1.25rem;
+    position: absolute;
+    top: 45%;
+    transform: translate(70%, -50%);
+  }
+}
+nav ul #food {
+  transform: rotate(-45deg);
+}
+@media (min-width: 768px) {
+  nav ul #food {
+    writing-mode: vertical-rl;
+    font-size: 1.25rem;
+    position: absolute;
+    top: 45%;
+    transform: translate(70%, -50%);
+  }
 }
 nav ul .content {
   overflow: hidden;
   font-size: 1.25rem;
 }
 nav ul #bar-1 {
-  background-color: beige;
+  background-color: white;
+}
+@media (min-width: 768px) {
+  nav ul #bar-1 {
+    display: none;
+  }
 }
 nav ul #bar-2 {
-  background-color: cadetblue;
+  background-color: beige;
 }
 nav ul #bar-3 {
+  background-color: cadetblue;
+}
+nav ul #bar-4 {
   background-color: coral;
 }
 

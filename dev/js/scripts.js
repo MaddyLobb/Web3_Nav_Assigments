@@ -1,8 +1,20 @@
 import { setupMenu } from "./slideMenu"
+import { navTL } from "./barsEnter"
+import { burgerTL } from "./burgerAnimation";
+
+var burgerButton = document.querySelector("#burger");
+
+
+burgerButton.addEventListener("click", () =>{
+    //console.log("burger clicked"); ///burger is being clicked but not playing///
+    burgerTL.play();
+});
+
 
 window.addEventListener('load', function () {
     setupMenu();
-})
+    navTL();
+});
 
 
 //last working code 

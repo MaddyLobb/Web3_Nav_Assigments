@@ -5,36 +5,125 @@ nav{
     right:0;
     z-index: 20;
 
+    #burger-container{
+        justify-content: flex-end;
+        display: flex;
+        padding: 30px;
+        position: absolute;
+        right: 0;
+        
+
+        @include md {
+            display: none !important;
+        }
+
+        #burger{
+            z-index: 30;
+            height: 40px;
+            width: 40px;
+        }
+    }
+
     ul{
         height: 100%;
         display: flex;
+        min-height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
 
         .nav-container{
+            display: flex; 
+            flex-basis: calc(50% - 0px);  
+            justify-content: center;
+            flex-direction: column;
+            width: 100vw;
+
+            @include md{
+                height: 100%;
+                width: 100%;
+                flex-basis: calc(0% - 0px);  
+            }
   
             .nav-content{
-                //height: 100%;
-
+    
                 aside{
-                    width: 50px;
-                    height: 100%;
-                    cursor: pointer;
+
+                    @include md{
+                        width: 60px;
+                        height: 100%;
+                        cursor: pointer;
+                    }
                 }
 
                 .nav-rightSide{
-                    width: 0px;
-                    height: 100%;
-                    transition: 0.25s;
-                   
+                    visibility: hidden; /// causing content to not show at larger size///
+
+                    @include md{
+                        width: 0px;
+                        height: 100%;
+                        transition: 0.25s;   
+                    }
+                    
                 }
             }
         }
 
         .main_title{
-            writing-mode: vertical-rl;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             font-size: rem-calc(20);
-            position: absolute;
-            top: 45%;
-            transform: translate(50%,-50%);
+
+
+        }
+
+        #about{
+            transform: rotate(-45deg);  
+
+            @include md{
+                writing-mode: vertical-rl;
+                font-size: rem-calc(20);
+                position: absolute;
+                top: 45%;
+                transform: translate(70%,-50%); 
+            }
+        }
+
+        #community{
+            transform: rotate(45deg);  
+
+            @include md{
+                writing-mode: vertical-rl;
+                font-size: rem-calc(20);
+                position: absolute;
+                top: 45%;
+                transform: translate(70%,-50%); 
+            }
+        }
+
+        #shop{
+            transform: rotate(45deg); 
+            
+            @include md{
+                writing-mode: vertical-rl;
+                font-size: rem-calc(20);
+                position: absolute;
+                top: 45%;
+                transform: translate(70%,-50%); 
+            }
+        }
+
+        #food{
+            transform: rotate(-45deg); 
+            
+            @include md{
+                writing-mode: vertical-rl;
+                font-size: rem-calc(20);
+                position: absolute;
+                top: 45%;
+                transform: translate(70%,-50%); 
+            }
         }
 
         .content{
@@ -43,17 +132,26 @@ nav{
         }
 
         #bar-1{
-            background-color: beige;
+            background-color: white;
+
+            @include md{
+                display: none;
+            }
         }
 
         #bar-2{
-            background-color: cadetblue;
+            background-color: beige;
         }
 
         #bar-3{
+            background-color: cadetblue;
+        }
+
+        #bar-4{
             background-color: coral;
         }
     }
+    
 }
 
 .active{
@@ -62,3 +160,68 @@ nav{
     justify-content: center !important;
     align-items: center !important;
 }
+
+//last working css before experimenting with mobile
+
+// height: 100vh;
+//     position: fixed;
+//     top:0;
+//     right:0;
+//     z-index: 20;
+
+//     ul{
+//         height: 100%;
+//         display: flex;
+
+//         .nav-container{
+  
+//             .nav-content{
+//                 //height: 100%;
+
+//                 aside{
+//                     width: 60px;
+//                     height: 100%;
+//                     cursor: pointer;
+//                 }
+
+//                 .nav-rightSide{
+//                     width: 0px;
+//                     height: 100%;
+//                     transition: 0.25s;
+                   
+//                 }
+//             }
+//         }
+
+//         .main_title{
+//             writing-mode: vertical-rl;
+//             font-size: rem-calc(20);
+//             position: absolute;
+//             top: 45%;
+//             transform: translate(70%,-50%);
+//         }
+
+//         .content{
+//             overflow: hidden;
+//             font-size: rem-calc(20);
+//         }
+
+//         #bar-1{
+//             background-color: beige;
+//         }
+
+//         #bar-2{
+//             background-color: cadetblue;
+//         }
+
+//         #bar-3{
+//             background-color: coral;
+//         }
+//     }
+
+//     .active{
+//         width: 85vw !important;
+//         display: flex !important;
+//         justify-content: center !important;
+//         align-items: center !important;
+//     }
