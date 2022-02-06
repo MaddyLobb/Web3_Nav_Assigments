@@ -534,6 +534,7 @@ nav #burger-container {
   padding: 30px;
   position: absolute;
   right: 0;
+  cursor: pointer;
 }
 @media (min-width: 768px) {
   nav #burger-container {
@@ -567,11 +568,13 @@ nav ul .nav-container {
     flex-basis: calc(0% - 0px);
   }
 }
+nav ul .nav-container .nav-content aside {
+  cursor: pointer;
+}
 @media (min-width: 768px) {
   nav ul .nav-container .nav-content aside {
     width: 60px;
     height: 100%;
-    cursor: pointer;
   }
 }
 nav ul .nav-container .nav-content .nav-rightSide {
@@ -584,6 +587,9 @@ nav ul .nav-container .nav-content .nav-rightSide {
     transition: 0.25s;
     display: block;
   }
+}
+nav ul .main_title:hover, nav ul .main_title:active {
+  text-decoration: underline;
 }
 nav ul .main_title {
   display: flex;

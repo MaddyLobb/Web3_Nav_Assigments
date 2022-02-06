@@ -11,6 +11,7 @@ nav{
         padding: 30px;
         position: absolute;
         right: 0;
+        cursor: pointer;
         
 
         @include md {
@@ -51,11 +52,11 @@ nav{
             .nav-content{
     
                 aside{
+                    cursor: pointer;
 
                     @include md{
                         width: 60px;
                         height: 100%;
-                        cursor: pointer;
                     }
                 }
 
@@ -74,13 +75,15 @@ nav{
             }
         }
 
+        .main_title:hover, .main_title:active{
+            text-decoration: underline;
+        }
+
         .main_title{
             display: flex;
             justify-content: center;
             align-items: center;
             font-size: rem-calc(20);
-
-
         }
 
         #about{
