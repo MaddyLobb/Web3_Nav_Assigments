@@ -440,49 +440,24 @@ header > div aside a {
 }
 @media (min-width: 768px) {
   #hero {
-    display: grid;
-    grid-template-areas: ". hero .";
-    grid-template-columns: auto 768px auto;
-  }
-}
-@media (min-width: 992px) {
-  #hero {
-    display: grid;
-    grid-template-areas: ". hero .";
-    grid-template-columns: auto 992px auto;
-  }
-}
-@media (min-width: 1200px) {
-  #hero {
-    display: grid;
-    grid-template-areas: ". hero .";
-    grid-template-columns: auto 1440px auto;
+    width: 80vw;
   }
 }
 #hero > div {
   overflow: hidden !important;
   height: 100%;
 }
-@media (min-width: 768px) {
-  #hero > div {
-    grid-area: hero;
-  }
-}
-@media (min-width: 992px) {
-  #hero > div {
-    grid-area: hero;
-  }
-}
-@media (min-width: 1200px) {
-  #hero > div {
-    grid-area: hero;
-  }
-}
 #hero > div article {
   align-items: center;
   display: flex;
   height: 90%;
-  width: 70%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+@media (min-width: 768px) {
+  #hero > div article {
+    width: 70%;
+  }
 }
 #hero > div article section {
   color: #000;
