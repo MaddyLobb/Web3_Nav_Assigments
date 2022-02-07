@@ -568,18 +568,19 @@ nav ul .nav-container .nav-content .nav-rightSide .images {
   overflow: hidden;
   align-items: center;
   height: 100%;
-  width: 75%;
+  width: 100%;
   display: grid;
   grid-template-areas: ". images .";
   display: grid;
   grid-area: images;
   gap: 10px;
-  grid-template-areas: " wc1 wc2 wc3 ";
+  grid-template-areas: "wc1 wc2 wc3";
 }
 nav ul .nav-container .nav-content .nav-rightSide .images img {
   height: auto;
   width: 50%;
   grid-template-columns: auto 50% auto;
+  justify-content: center;
 }
 nav ul #wc1 {
   grid-area: wc1;

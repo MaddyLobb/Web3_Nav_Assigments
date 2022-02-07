@@ -61,7 +61,6 @@ nav{
                 }
 
                 .nav-rightSide{
-                    // visibility: hidden; /// causing content to not show at larger size///
                     display: none;
 
                     @include md{
@@ -70,9 +69,41 @@ nav{
                         transition: 0.25s;   
                         display: block;
                     }
+
+                    .images{
+                        position: absolute;
+                        overflow: hidden;
+                        align-items: center;
+                        height: 100%;
+                        width: 75%;
+
+                        display: grid;
+                        grid-template-areas: ". images .";
+                        display: grid;
+                        grid-area: images;
+                        gap: 10px;
+                        grid-template-areas: " wc1 wc2 wc3 ";
+                        
+
+                        img{
+                            height: auto;
+                            width: 50%;
+                            grid-template-columns: auto 50% auto;
+                        }
+                    }
                     
                 }
             }
+        }
+
+        #wc1{
+            grid-area: wc1;
+        }
+        #wc2{
+            grid-area: wc2;
+        }
+        #wc3{
+            grid-area: wc3;
         }
 
         .main_title:hover, .main_title:active{
