@@ -6,7 +6,7 @@ import { displayWindowSizeMobile } from "./mobileResize";
 import { mobileTopicAnimation } from "./mobileTopicClickAnimation";
 
 var burgerButton = document.querySelector("#burger");
-let canISeeMenu = false;
+export var canISeeMenu = false;
 
 function openCloseMenu(){
     if(canISeeMenu === false){
@@ -22,14 +22,9 @@ function openCloseMenu(){
 
 burgerButton.addEventListener("click", openCloseMenu);
 
-// if(document.documentElement.clientWidth <= 768){
-//     mobileSquaresFadeIn.play();
-// }
-// burgerButton.addEventListener("click", () =>{
-//     //console.log("burger clicked");
-//     burgerTL.play();
-// });
-
+// let buttons = document.querySelectorAll(".nav-container aside");
+var mobilNav = document.querySelectorAll(".nav-container")
+mobilNav.addEventListener("click", openCloseMenu);
 
 window.addEventListener('load', function () {
     console.log("load");
@@ -38,7 +33,7 @@ window.addEventListener('load', function () {
     barTL.play();
 });
 
-// window.addEventListener('resize', mobileTopicAnimation);
+//window.addEventListener('resize', mobileTopicAnimation);
 
 // window.addEventListener('click', mobileTopicAnimation);
 
