@@ -3,6 +3,7 @@ import { barTL } from "./barsEnter"
 import { burgerTL } from "./burgerAnimation"
 import { mobileMenuEnter } from "./mobileMenu";
 import { displayWindowSizeMobile } from "./mobileResize";
+import { mobileTopicAnimation } from "./mobileTopicClickAnimation";
 
 var burgerButton = document.querySelector("#burger");
 let canISeeMenu = false;
@@ -11,12 +12,10 @@ function openCloseMenu(){
     if(canISeeMenu === false){
         burgerTL.play();
         mobileMenuEnter.play();
-        //mobileMenuAnimation.play();
         canISeeMenu = true;
     }else{
         burgerTL.reverse();
         mobileMenuEnter.reverse();
-        //mobileMenuAnimation.reverse();
         canISeeMenu = false;
     }
 }
@@ -35,10 +34,13 @@ burgerButton.addEventListener("click", openCloseMenu);
 window.addEventListener('load', function () {
     console.log("load");
     setupMenu();
+    mobileTopicAnimation();
     barTL.play();
 });
 
-// window.addEventListener("click", mobileMenuAnimation);//
+// window.addEventListener('resize', mobileTopicAnimation);
+
+// window.addEventListener('click', mobileTopicAnimation);
 
 window.addEventListener('resize', displayWindowSizeMobile);
 

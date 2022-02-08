@@ -1,1 +1,0 @@
-import{gsap}from"gsap";export function displayWindowSize(){let e=document.querySelector(".nav-container").offsetWidth;document.documentElement.clientWidth<=1024?(console.log("hide"),gsap.set(".nav-container",{y:-e,alpha:0})):(console.log("un-hide"),gsap.set(".nav-container",{y:0,alpha:1}))}

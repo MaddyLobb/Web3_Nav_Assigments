@@ -675,3 +675,11 @@ nav ul #bar-4 {
   justify-content: center !important;
   align-items: center !important;
 }
+
+.active-2 {
+  height: 100vh !important;
+  width: 100vw !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
